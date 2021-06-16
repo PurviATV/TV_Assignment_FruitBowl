@@ -2,25 +2,37 @@ package com.tv.assignment;
 
 import java.util.ArrayList;
 
-public class Banana extends Fruit{
-	static ArrayList<String> bananaList = new ArrayList<>();
-	static int countOfBanana;
+public class Banana {
 
-	public Banana() {
-		countOfBanana = 0;
+	private static Banana instance = null;
+
+	private Banana() {
 	}
+
+	public static Banana getInstance() {
+		if (instance == null) {
+			instance = new Banana();
+		}
+		return instance;
+	}
+
+	private ArrayList<String> bananaList = new ArrayList<>();
 
 	public void addBananas(String banana) {
 		bananaList.add(banana);
-		countOfBanana++;
 	}
 
 	public int getCountOfBanana() {
-		return countOfBanana;
+		return bananaList.size();
 	}
+
 	public ArrayList<String> getBowlOfBanana() {
 		return bananaList;
 
+	}
+
+	public void displayBowlOfBananas() {
+		System.out.println(bananaList);
 	}
 
 }

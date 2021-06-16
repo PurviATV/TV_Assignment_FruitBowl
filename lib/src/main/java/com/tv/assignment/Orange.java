@@ -2,26 +2,36 @@ package com.tv.assignment;
 
 import java.util.ArrayList;
 
-public class Orange extends Fruit {
+public class Orange {
 
-	static ArrayList<String> orangeList = new ArrayList<>();
-	static int countOfOranges;
+	private static Orange instance = null;
 
-	public Orange() {
-		countOfOranges = 0;
+	private Orange() {
 	}
+
+	public static Orange getInstance() {
+		if (instance == null) {
+			instance = new Orange();
+		}
+		return instance;
+	}
+
+	private ArrayList<String> orangeList = new ArrayList<>();
 
 	public void addOranges(String orange) {
 		orangeList.add(orange);
-		countOfOranges++;
 	}
 
 	public int getCountOfOranges() {
-		return countOfOranges;
+		return orangeList.size();
 	}
+
 	public ArrayList<String> getBowlOfOranges() {
 		return orangeList;
 
+	}
+	public void displayBowlOfOranges() {
+		System.out.println(orangeList);
 	}
 
 }

@@ -2,25 +2,35 @@ package com.tv.assignment;
 
 import java.util.ArrayList;
 
-public class Apple extends Fruit {
+public class Apple  {
 
-	static ArrayList<String> appleList = new ArrayList<>();
-	static int countOfApples=0;
+	private static Apple instance = null;
 
-	
+	private Apple() {
+	}
 
+	public static Apple getInstance() {
+		if (instance == null) {
+			instance = new Apple();
+		}
+		return instance;
+	}
+
+	private ArrayList<String> appleList = new ArrayList<>();
 
 	public void addApples(String apple) {
 		appleList.add(apple);
-		countOfApples++;
 	}
 
 	public int getCountOfApples() {
-		return countOfApples;
+		return appleList.size();
 	}
 
 	public ArrayList<String> getBowlOfApples() {
 		return appleList;
 
+	}
+	public void displayBowlOfApples() {
+		System.out.println(appleList);
 	}
 }
