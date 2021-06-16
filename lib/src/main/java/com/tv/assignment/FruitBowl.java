@@ -28,13 +28,13 @@ public class FruitBowl {
 		for (String fruit : fruitBowl) {
 			switch (fruit) {
 			case "apple":
-				Apple.getInstance().addApples(fruit);
+				Apple.appleList.add(fruit);
 				break;
 			case "orange":
-				Orange.getInstance().addOranges(fruit);
+				Orange.orangeList.add(fruit);
 				break;
 			case "banana":
-				Banana.getInstance().addBananas(fruit);
+				Banana.bananaList.add(fruit);
 				break;
 			default:
 				System.out.println("Unknown fruit");
