@@ -2,16 +2,17 @@ package com.tv.assignment;
 
 import java.util.ArrayList;
 
-public class Apple  {
-
-    static ArrayList<String> appleList = new ArrayList<>();
+public class Apple extends FruitBowl{
 
 
-	public int getCountOfApples() {
-		return appleList.size();
+	static ArrayList<String> appleList = new ArrayList<>();
+
+
+	public void displayCount() {
+		System.out.println(appleList.size());
 	}
 
-	public void displayBowlOfApples() {
+	public void displayFruits() {
 		System.out.println(appleList);
 	}
 }

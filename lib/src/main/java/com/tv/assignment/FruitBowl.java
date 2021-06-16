@@ -6,20 +6,21 @@ public class FruitBowl {
 
 	ArrayList<String> fruitBowl = new ArrayList<>();
 
-	public FruitBowl(String[] fruits) {
+	public void addFruits(String[] fruits) {
 		for (String fr : fruits)
 			fruitBowl.add(fr);
-	}
-
-	public int getCountOfAllFruits() {
-		return fruitBowl.size();
 	}
 
 	public ArrayList<String> getBowlOfFruits() {
 		return fruitBowl;
 
 	}
-	public void displayBowlOfFruits() {
+
+	public void displayCount() {
+		System.out.println(fruitBowl.size());
+	}
+
+	public void displayFruits() {
 		System.out.println(fruitBowl);
 
 	}

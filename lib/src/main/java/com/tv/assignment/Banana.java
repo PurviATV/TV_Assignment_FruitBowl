@@ -2,14 +2,14 @@ package com.tv.assignment;
 
 import java.util.ArrayList;
 
-public class Banana {
+public class Banana extends FruitBowl{
 
 
 	static ArrayList<String> bananaList = new ArrayList<>();
 
 
-	public int getCountOfBanana() {
-		return bananaList.size();
+	public void displayCount() {
+		System.out.println(bananaList.size());
 	}
 
 	public ArrayList<String> getBowlOfBanana() {
@@ -17,7 +17,7 @@ public class Banana {
 
 	}
 
-	public void displayBowlOfBananas() {
+	public void displayFruits() {
 		System.out.println(bananaList);
 	}
 
